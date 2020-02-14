@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iSara Lv8</title>
+
+  <!-- css -->
+  <!-- <link rel="stylesheet" href="sass/reset.css"> -->
+  <link rel="stylesheet" href="sass/style.css">
+  <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
+  <link href="slick/slick.css" rel="stylesheet" type="text/css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+</head><!-- head -->
+
+
+
+<body>
+
+<div id="showloading"><!-- ローディング用 -->
+  <img src="img/loading.gif" alt="loading">
+</div>
+
+<div id="contents" class="hidden">
+  
+  <header class="header">
+    <div class="header__inner">
+      
+      <h1 class="header__logo"><a class="header__logo-link" href="#">Level.8</a></h1>
+      <nav class="header__list header__sp-none">
+        <ul class="header__ul">
+          <li class="header__li"><a href="#about" class="header__li-link">About</a></li>
+          <li class="header__li"><a href="#activities" class="header__li-link">Activities</a></li>
+          <li class="header__li"><a href="#flow" class="header__li-link">Flow</a></li>
+          <li class="header__li"><a href="#member" class="header__li-link">Member</a></li>
+          <li class="header__li"><a href="#question" class="header__li-link">Q&A</a></li>
+          <li class="header__li"><a href="#contact" class="header__li-link">Contact</a></li>
+        </ul>
+      </nav>
+
+
+      <div class="l-drawer pc-none"><!-- l-drawer -->
+        <input class="l-drawer__checkbox" id="drawerCheckbox" type="checkbox" >
+        <label class="l-drawer__icon" for="drawerCheckbox">
+          <span class="l-drawer__icon-parts" id="btn-open"></span>
+        </label>
+        <label class="l-drawer__overlay" for="drawerCheckbox"></label>
+        <nav class="l-drawer__menu">
+          <ul>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#about">About</a>
+            </li>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#activities">Activities</a>
+            </li>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#flow">Flow</a>
+            </li>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#member">Member</a>
+            </li>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#question">Q&A</a>
+            </li>
+            <li class="l-drawer__item">
+              <a class="l-drawer__item-inner" href="#contact">Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div><!-- l-drawer -->
+
+    </div><!-- header-inner -->
+  </header><!-- header -->
+
+  <main>
+    <div class="mv"><!-- mv -->   
+      <div class="mv__wrapper">
+        <div class="mv__bg-img">
+          <div class="mv__inner" id="slider">
+
+              <div class="mv__carousel">
+                <div class="mv__right">
+                  <img class="mv__right-img" src="./img/top1.png" alt="top1">
+                </div>
+                <div class="mv__left">
+                  <p class="mv__title">We value customers more than anyone.</p>
+                  <p class="mv__sentence">We’re a creative digital<br class="pc-none"> marketing company<br class="pc-none"> that helps you bring better results.</p>
+                </div>
+              </div>
+
+              <div class="mv__carousel">
+                <div class="mv__right">
+                  <img class="mv__right-img" src="./img/top2.png" alt="top2">
+                </div>
+                <div class="mv__left">
+                  <p class="mv__title">We’re a creative marketing team.</p>
+                  <p class="mv__sentence">We’re a creative digital<br class="pc-none"> marketing company<br class="pc-none"> that helps you bring better results.</p>
+                </div>
+              </div>
+              
+              <div class="mv__carousel">
+                <div class="mv__right">
+                  <img class="mv__right-img" src="./img/top3.png" alt="top3">
+                </div>
+                <div class="mv__left">
+                  <p class="mv__title">Enjoy your Website and make it better!</p>
+                  <p class="mv__sentence-3">Enjoy a combination of strategy,<br class="pc-none"> results,<br class="sp-none"> and service,<br class="pc-none"> that create the best experience possible.</p>
+                </div>
+              </div>
+
+          </div><!-- main-inner owl-carousel-->
+        </div><!-- mv__bg-img -->
+      </div><!-- top-wrapper -->  
+    </div><!-- mv -->   
+    
+    <section class="about"><!-- about --> 
+      <div class="about__inner">
+        <h2 class="about__title" id="about">About</h2>
+        <div class="about__proposals">
+          <figure class="about__proposal scroll-fade">
+            <div class="about__figure"><img class="about__img" src="./img/about1.png" alt="about1"></div>
+            <figcaption class="about__sentence">We will provide you the best<br> solution for promotion that<br>drives results.</figcaption>
+          </figure>
+          <figure class="about__proposal scroll-fade">
+            <div class="about__figure"><img class="about__img" src="./img/about2.png" alt="about2"></div>
+            <figcaption class="about__sentence">Our SEO consulting helps your business grow online leads, calls, and revenue.</figcaption>
+          </figure>
+          <figure class="about__proposal scroll-fade">
+            <div class="about__figure"><img class="about__img" src="./img/about3.png" alt="about3"></div>
+            <figcaption class="about__sentence">We always deliver something valuable and meaningful for<br>clients and society.</figcaption>
+          </figure>
+        </div>
+        <p class="about__valuable">We always deliver something valuable for clients and society.</p>
+        <div class="about__logos">
+          <img class="about__logo" src="./img/logo1.png" alt="logo1">
+          <img class="about__logo" src="./img/logo2.png" alt="logo2">
+          <img class="about__logo" src="./img/logo3.png" alt="logo3">
+          <img class="about__logo" src="./img/logo4.png" alt="logo4">
+          <img class="about__logo" src="./img/logo5.png" alt="logo5">
+        </div>
+      </div><!-- about-inner -->
+    </section><!-- about --> 
+    
+    <section class="activities"><!-- activities --> 
+      <div class="activities__inner">
+        <h2 class="activities__title" id="activities">Activities</h2>
+        <div class="activities__tabs tab-group">
+          <div class="activities__tab tab is-active">Making</div>
+          <div class="activities__tab tab">Consultant</div>
+          <div class="activities__tab tab">Business</div>
+        </div>
+
+        <div class="panel-group">
+          <div class="panel is-show">
+            <div class="activities__box">
+              <div class="activities__box-left">
+                <p class="activities__proposal">Making a plan together that drives result.</p>
+                <p class="activities__sentence">Get the best tools, technologies, and results you’ve ever had in your business.</p>
+                <span class="activities__more">LEARN MORE</span>
+              </div>
+              <div class="activities__box-right">
+                <img class="activities__img" src="./img/activities-1.png" alt="activities-1">
+              </div>
+            </div>
+          </div><!-- panel -->
+          <div class="panel"><!-- panel-2 -->
+            <div class="activities__box">
+              <div class="activities__box-left">
+                <p class="activities__proposal">Professional consultant</p>
+                <p class="activities__sentence">We provide everything that exactly fits your needs<br> such as creating contents, making videos and taking photographs.</p>
+                <span class="activities__more">LEARN MORE</span>
+              </div>
+              <div class="activities__box-right">
+                <img class="activities__img" src="./img/activities-2.png" alt="activities-2">
+              </div>
+            </div>
+          </div><!-- panel-2 -->
+          <div class="panel"><!-- panel-3 -->
+            <div class="activities__box">
+              <div class="activities__box-left">
+                <p class="activities__proposal">Future-Proof Your Business</p>
+                <p class="activities__sentence">Know about the latest updates in digital marketing before any of your competitors.</p>
+                <span class="activities__more">LEARN MORE</span>
+              </div>
+              <div class="activities__box-right">
+                <img class="activities__img" src="./img/activities-3.png" alt="activities-3">
+              </div>
+            </div>
+          </div><!-- panel-3 -->
+        </div><!-- panel-group -->
+
+
+
+      </div><!-- activities__inner --> 
+    </section><!-- activities --> 
+
+    <section class="flow"><!-- flow --> 
+      <div class="flow__inner">
+        <h2 class="flow__title" id="flow">Flow</h2>
+
+        <div class="flow__steps">
+          <div class="flow__step">
+            <img class="flow__step-icon" src="./img/flow-1.png" alt="flow-1">
+            <p class="flow__step-number">Step1</p>
+            <span class="flow__step-more openModal1">MORE</span>
+            <span class="flow__step-triangle"></span>
+          </div>
+          
+          <div class="flow__step">
+            <img class="flow__step-icon" src="./img/flow-2.png" alt="flow-2">
+            <p class="flow__step-number">Step2</p>
+            <span class="flow__step-more openModal2">MORE</span>
+            <span class="flow__step-triangle"></span>
+          </div>
+
+          <div class="flow__step">
+            <img class="flow__step-icon" src="./img/flow-3.png" alt="flow-3">
+            <p class="flow__step-number">Step3</p>
+            <span class="flow__step-more openModal3">MORE</span>
+            <span class="flow__step-triangle"></span>
+          </div>
+
+          <div class="flow__step">
+            <img class="flow__step-icon" src="./img/flow-4.png" alt="flow-4">
+            <p class="flow__step-number">Step4</p>
+            <span class="flow__step-more openModal4">MORE</span>
+          </div>
+        </div><!-- flow__steps --> 
+
+      </div><!-- flow-inner --> 
+
+      <!-- モーダルエリアここから -->
+        <div class="modalArea1">
+          <div class="modalBg"></div>
+          <div class="modalWrapper"><!-- modalWrapper -->
+            <div class="modalContents">
+              <img class="flow__step-icon" src="./img/flow-1.png" alt="flow-1">
+              <p class="flow__step-number">Step1</p>
+              <p class="flow__step-text">Text in here.Text in here.Text in here.<br class="sp-none"> Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.</p>
+            </div>
+            <div class="closeModal">
+              <span class="close"><img src="./img/batu.png" alt="close-button"></span>
+            </div>
+          </div><!-- modalWrapper -->
+        </div><!-- modalArea -->
+
+
+        <div class="modalArea2">
+          <div class="modalBg"></div>
+          <div class="modalWrapper"><!-- modalWrapper -->
+            <div class="modalContents">
+              <img class="flow__step-icon" src="./img/flow-2.png" alt="flow-2">
+              <p class="flow__step-number">Step2</p>
+              <p class="flow__step-text">Text in here.Text in here.Text in here.<br class="sp-none"> Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.</p>
+            </div>
+            <div class="closeModal">
+              <span class="close"><img src="./img/batu.png" alt="close-button"></span>
+            </div>
+          </div><!-- modalWrapper -->
+        </div><!-- modalArea -->    
+
+
+        <div class="modalArea3">
+          <div class="modalBg"></div>
+          <div class="modalWrapper"><!-- modalWrapper -->
+            <div class="modalContents">
+              <img class="flow__step-icon" src="./img/flow-3.png" alt="flow-3">
+              <p class="flow__step-number">Step3</p>
+              <p class="flow__step-text">Text in here.Text in here.Text in here.<br class="sp-none"> Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.</p>
+            </div>
+            <div class="closeModal">
+              <span class="close"><img src="./img/batu.png" alt="close-button"></span>
+            </div>
+          </div><!-- modalWrapper -->
+        </div><!-- modalArea -->
+
+
+        <div class="modalArea4"><!-- modalArea -->
+          <div class="modalBg"></div>
+          <div class="modalWrapper"><!-- modalWrapper -->    
+            <div class="modalContents">
+              <img class="flow__step-icon" src="./img/flow-4.png" alt="flow-4">
+              <p class="flow__step-number">Step4</p>
+              <p class="flow__step-text">Text in here.Text in here.Text in here.<br class="sp-none"> Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.Text in here.</p>
+            </div>
+            <div class="closeModal">
+              <span class="close"><img src="./img/batu.png" alt="close-button"></span>
+            </div>
+          </div><!-- modalWrapper -->
+        </div><!-- modalArea -->
+      <!-- モーダルエリアここまで -->
+
+    </section><!-- flow --> 
+
+    <section class="member"><!-- member --> 
+      <div class="member__inner"><!-- member-inner --> 
+        <h2 class="member__title" id="member">Member</h2>
+        <div class="member__introduce" id="slider2">         
+          <!-- <span class="member__introduce-left"></span> -->
+
+          <div class="member__introduce-person">
+            <img class="member__introduce-person-img" src="./img/m-1.png" alt="CEO">
+            <p class="member__introduce-person-post">CEO</p>
+            <p class="member__introduce-person-name">Alex Khan</p>
+          </div>
+          <div class="member__introduce-person">
+            <img class="member__introduce-person-img" src="./img/m-2.png" alt="CDO">
+            <p class="member__introduce-person-post">CDO</p>
+            <p class="member__introduce-person-name">Lori J. Tucker</p>
+          </div>
+          <div class="member__introduce-person">
+            <img class="member__introduce-person-img" src="./img/m-3.png" alt="CTO">
+            <p class="member__introduce-person-post">CTO</p>
+            <p class="member__introduce-person-name">John Doe</p>
+          </div>
+
+          <!-- <span class="member__introduce-right"></span> -->
+        </div>
+      </div><!-- member-inner --> 
+    </section><!-- member --> 
+
+    <section class="question"><!-- question --> 
+      <div class="question__inner"><!-- question__inner --> 
+        <h2 class="question__title" id="question">Q&A</h2>
+        <div class="question__lists">
+          <span class="question__lists-icon">Q</span>
+          <div class="question__lists-list"> 
+            <p class="question__lists-list-sentence">It is question.</p>
+            <span class="question__lists-list-icon"></span>
+          </div>
+        </div>
+        <div class="question__lists">
+          <span class="question__lists-icon">Q</span>
+          <div class="question__lists-list"> 
+            <p class="question__lists-list-sentence">It is question.</p>
+            <span class="question__lists-list-icon"></span>
+          </div>
+        </div>
+        <div class="question__lists">
+          <span class="question__lists-icon">Q</span>
+          <div class="question__lists-list"> 
+            <p class="question__lists-list-sentence">It is question.</p>
+            <span class="question__lists-list-icon"></span>
+          </div>
+        </div>
+      </div><!-- question__inner --> 
+    </section><!-- question --> 
+
+    <section class="contact"><!-- contact --> 
+      <div class="contact__bg-img">
+        <div class="contact__inner"><!-- contact__inner --> 
+          <h2 class="contact__title" id="contact">Contact</h2>
+          <p class="contact__proposal">We offer you better product.</p>
+          <p class="contact__sentence">Our product will bring more customers, grow revenue<br>and future-proof your business</p>
+          <span class="contact__button">CONTACT</span>
+        </div><!-- contact__inner --> 
+      </div>  
+    </section><!-- contact --> 
+
+  </main><!-- main -->
+
+  <footer>
+    <small class="copyright">Copyright &copy; iSara All Rights Reserved.</small>
+  </footer>
+
+</div><!-- ローディング非表示用 -->
+
+<!--- Script Source Files -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="js/script.js"></script>
+<!--- End of Script Source Files -->
+
+</body><!-- body -->
+</html><!-- html -->
+
