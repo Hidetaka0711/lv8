@@ -1,0 +1,224 @@
+.about {
+  margin-top: 345px;
+  @include mq('tab') {
+    margin-top: 29.237288135593218vw; 
+  }
+  @include mq('sp') {
+    margin-top: 132.53333333333333vw;
+    // margin-top: 497px;
+  }
+  &__inner {
+    margin: 0 auto;
+    width: 1180px;
+    @include mq('tab') {
+      width: 97.45762711864407vw;
+    }
+    @include mq('sp') {
+      margin: 0 4vw;
+      // margin: 0 15px;
+      width: 92%;
+    }
+  }
+  &__title {
+    color: $color-blue;
+    font-size: 42px;
+    font-weight: normal;
+    text-align: center;
+    @include mq('tab') {
+      font-size: 3.559322033898305vw;
+    }
+    @include mq('sp') {
+      font-size: 11.2vw;
+    }
+  }
+  &__proposals {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    @include mq('tab') {
+      margin-top: 6.779661016949152vw;
+    }
+    @include mq('sp') {
+      flex-direction: column;
+      margin: 0 4.666666666666667vw;
+      // margin: 0 17.5px;
+      // justify-self: flex-start;
+    }
+  }
+  &__proposal {
+    box-shadow: $shadow;
+    height: 351px;
+    text-align: center;
+    width: 310px;
+    @include mq('tab') {
+      height: 29.745762711864405vw;
+      width: 26.271186440677965vw;
+    }
+    @include mq('sp') {
+      height: 93.6vw;
+      // height: 351px;
+      margin-top: 13.333333333333334vw;
+      // margin-top: 50px;
+      width: 82.66666666666667vw;
+      // width: 310px;
+    }
+    &:first-of-type {
+      margin-left: 74.8px;
+      @include mq('tab') {
+        margin-left: 6.338983050847457vw;
+      }
+      @include mq('sp') {
+        margin-left: 0;
+      }
+    }
+    &:last-of-type {
+      margin-right: 75.2px;
+      @include mq('tab') {
+        margin-right: 6.372881355932203vw;
+      }
+      @include mq('sp') {
+        margin-right: 0;
+      }
+    }
+  }
+  &__figure {
+    margin-top: 20px;
+    @include mq('tab') {
+      margin-top: 1.694915254237288vw;
+    }
+    @include mq('sp') {
+      margin-top: 5.333333333333333vw;
+      // margin-top: 20px;
+    }
+  }
+  &__img {
+    height: 181px;
+    width: 180px;
+    @include mq('tab') {
+      height: 14.140625vw;
+      width: 14.0625vw;
+    }
+    @include mq('sp') {
+      height: 48.266666666666666vw;
+      width: 48vw;
+    }
+  }
+  &__sentence {
+    font-size: 16px;
+    height: 72px;
+    line-height: division(19,16);
+    margin: 30px 20px 48px;
+    text-align: left;
+    width: 270px;
+    @include mq('tab') {
+      font-size: 1.3559322033898304vw;
+      height: 6.101694915254237vw;
+      margin: 2.542372881355932vw 1.694915254237288vw 4.067796610169491vw;
+      width: 22.881355932203387vw;
+    }
+    @include mq('sp') {
+      font-size: 4.266666666666667vw;
+      // font-size: 16px;
+      height: 19.2vw;
+      // height: 72px;
+      margin: 8vw 5.333333333333333vw 12.8vw; 
+      // margin: 30px 20px 48px; 
+      width: 72vw;
+      // width: 270px;
+    }
+  }
+  &__valuable {
+    color: $color-blue;
+    font-size: 16px;
+    line-height: division(19,16);
+    height: 38px;
+    margin: 80px auto 136px;
+    text-align: center;
+    width: 306px;
+    @include mq('tab') {
+      font-size: 1.3559322033898304vw;
+      height: 3.2203389830508473vw;
+      margin: 6.779661016949152vw auto 11.525423728813559vw;
+      width: 30.508474576271183vw;
+    }
+    @include mq('sp') {
+      font-size: 4.266666666666667vw;
+      // font-size: 16px;
+      height: 10.133333333333333vw;
+      // height: 38px;
+      margin: 13.333333333333334vw auto;
+      // margin: 50px auto;
+      width: 81.6vw;
+      // width: 306px;
+    }
+  }
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 109.5px;
+    @include mq('tab') {
+      margin: 0 9.279661016949152vw;
+    }
+    @include mq('sp') {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    &:nth-of-type(1) {
+      width: 161px;
+      @include mq('tab') {
+        width: 13.64406779661017vw;
+      }
+      @include mq('sp') {
+        width: 42.93333333333333vw;
+        // width: 161px;
+      }
+    }
+    &:nth-of-type(2) {
+      width: 151px;
+      @include mq('tab') {
+        width: 12.796610169491524vw;
+      }
+      @include mq('sp') {
+        margin-top: 3.466666666666667vw;
+        // margin-top: 13px;
+        width: 40.266666666666666vw;
+        // width: 151px;
+      }
+    }
+    &:nth-of-type(3) {
+      width: 202px;
+      @include mq('tab') {
+        width: 17.11864406779661vw;
+      }
+      @include mq('sp') {
+        margin-top: 3.466666666666667vw;
+        width: 53.86666666666667vw;
+        // width: 202px;
+      }
+    }
+    &:nth-of-type(4) {
+      width: 152px;
+      @include mq('tab') {
+        width: 12.88135593220339vw;
+      }
+      @include mq('sp') {
+        margin-top: 3.466666666666667vw;
+        width: 40.53333333333333vw;
+        // width: 152px;
+      }
+    }
+    &:nth-of-type(5) {
+      width: 175px;
+      @include mq('tab') {
+        width: 14.83050847457627vw;
+      }
+      @include mq('sp') {
+        margin-top: 3.466666666666667vw;
+        width: 46.666666666666664vw;
+        // width: 175px;
+      }
+    }
+  }
+}

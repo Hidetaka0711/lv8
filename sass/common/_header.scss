@@ -1,0 +1,263 @@
+.header {
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  
+  &__inner {
+    box-shadow: $shadow;
+    background: $color-bg;
+    border-radius: 16px; 
+    display: flex;
+    height: 54px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto 0;
+    width: 1180px;
+    @include mq('tab') {
+      border-radius: 1.3559322033898304vw;
+      height: 4.21875vw;
+      margin: 1.694915254237288vw auto 0;
+      width: 97.45762711864407%;
+    }
+    @include mq('sp') {
+      height: 12.266666666666666vw;
+      // height: 46px;
+      margin: 4vw 4vw 0;
+      // margin-top: 15px;
+      width: 92vw;
+    }
+  }
+  &__logo {
+    font-size: 26px;
+    margin: 9px 0 9px 50px;
+    @include mq('tab') {
+      font-size: 2.2033898305084745vw;
+      margin: 0.7627118644067796vw 0 0.7627118644067796vw 4.23728813559322vw;
+    }
+    @include mq('sp') {
+      font-size: 6.933333333333334vw;
+      // font-size: 26px;
+      margin: 1.3333333333333333vw 0 1.3333333333333333vw 2.6666666666666665vw;
+      // margin: 5px 0 5px 10px;
+    }
+  }
+  &__logo-link {
+    color: $color-blue;
+    display: inline-block;
+    // line-height: 36px;
+    line-height: division(36,26);
+  }
+  // &__list {
+  //   // width: auto;
+  // }
+  &__sp-none {
+    @include mq('sp') {
+      display: none; 
+    }
+  }
+  // &__ul {
+  //   // vertical-align: center;
+  // }
+  &__li {
+    display: inline-block;
+    font-size: 18px;
+    margin: 15px 0 14px 30px;
+    @include mq('tab') {
+      font-size: 1.40625vw;
+      // margin: 1.2722646310432568vw 0 1.1874469889737065vw 2.5445292620865136vw
+      margin: 1.171875vw 0 1.09375vw 2.34375vw;
+    }
+    &:first-of-type {
+      // margin-left: 512px;
+      @include mq('tab') {
+        // margin-left: 43.426632739609836vw;
+        // margin-left: 40vw;
+      }
+    }
+    &:last-of-type {
+      margin-right: 50px;
+      @include mq('tab') {
+        // margin-right: 4.2408821034775235vw;
+        margin-right: 3.90625vw;
+      }
+    }
+    &-link {
+      color: $color-blue;
+    }
+  }//-- &__inner --
+
+
+
+
+
+
+  &__inner {//-- &__inner.l-drawer ------//
+    .l-drawer {
+      display: none;
+      @include mq('sp') {
+        display: block;
+        position: relative;
+      }
+      
+      &__checkbox {
+        display: none;
+      }
+      &__icon{
+        background-color: #fff;
+        border-radius: 1.3333333333333333vw;
+        cursor: pointer;
+        display: block;
+        width: 13.333333333333334vw;
+        // width: 50px;
+        height: 12.266666666666666vw;
+        // height: 46px;
+        top: 2.1333333333333333vw;//--アイコンの枠の位置調整
+        // top: 8px;
+        right: 4.533333333333333vw;//--アイコンの枠の位置調整
+        // right: 17px;
+        z-index: 0;
+
+        &-parts,
+        &-parts:before,
+        &-parts:after{
+          background-color: $color-blue; 
+          display: block;
+          width: 8vw;//----------------bar大きさ調整
+          height: 0.8vw;//----------------bar大きさ調整
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        //--barの上下を形成 
+        &-parts:before,
+        &-parts:after{
+          content: " ";
+        }
+        &-parts:before{//-- barの上
+          top: 4.533333333333333vw;
+          // top: 17px
+        }
+        &-parts:after{//-- barの下
+          top: -4vw;
+          // top: -15px;
+        }
+
+      }
+      
+      // ドロワーメニュー開いた時のメインエリアを暗く
+      // &__overlay{
+      //   background: #000;
+      //   opacity: 0;
+      //   pointer-events: none; //ポインタの動作全部無効化
+      //   border: 1px solid #707070;
+      //   height: 100%;
+      //   width: 100%;
+      //   position: fixed;
+      //   top: 0;
+      //   right: 0;
+      // }
+      
+
+
+
+      // ドロワー側（開いた時）メニュー
+      &__menu{
+        background: #ffffff;
+        color: #000;
+        width: 46.4vw;
+        height: 100vh;
+        overflow-y: hidden; //スクロール
+        -webkit-overflow-scrolling: touch; //スクロール（SP）
+        position: fixed;
+        top: 0;
+        right: -46.4vw;//--リストを右にずらす
+        // right: -174px;
+      }
+      &__icon{
+        z-index: 4;
+      }
+      &__menu{
+        z-index: 3;
+      }
+      &__overlay{
+        z-index: 2;
+      }
+      
+
+      &__checkbox:checked ~ {
+        .l-drawer__icon{
+          position: fixed;
+
+          .l-drawer__icon-parts{
+            background: transparent;
+            z-index: 100;
+          }
+          .l-drawer__icon-parts:before{
+            -webkit-transform: rotate(-45deg);//-------×アイコン作成
+            transform: rotate(-45deg);//-------×アイコン作成
+            top: 0;
+            z-index: 100;
+          }
+          .l-drawer__icon-parts:after{
+            -webkit-transform: rotate(45deg);//-------×アイコン作成
+            transform: rotate(45deg);//-------×アイコン作成
+            top: 0;
+            z-index: 100;
+          }
+        }
+
+        // // メインエリアを暗くする
+        // .l-drawer__overlay {
+        //   opacity: 0.4;
+        //   pointer-events: auto; //ポインタの動作デフォルトに戻す
+        // }
+
+
+        // メニューをだす
+        .l-drawer__menu {
+          background-color: $color-blue;
+          right: 0;
+          // text-align: right;
+          ul {
+            margin: 24vw 0 0 11.2vw;
+            // margin: 90px 0 0 42px;
+            .l-drawer__item {
+              font-size: 5.333333333333333vw;
+              // font-size: 20px;
+              font-family: Alata;
+              margin: 0 4vw 8vw 0;
+              // margin: 0 15px 30px 0;
+              &-inner {
+                color: $color-w;
+              }
+            }
+          }
+        }
+      }
+      // 動きをスムーズに
+      &__icon-parts,
+      &__icon-parts:after,
+      &__icon-parts:before,
+      &__overlay,
+      &__menu{
+        -webkit-transition: all .7s ;
+        transition: all .7s ;
+      }
+    }//-- .l-drawer --//
+  }// &__inner //
+
+}//-- header --//
+
+#about, #activities, #flow, #member, #question, #contact {
+  margin-top: -74px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 74px; /* 打ち消し用のパディング */
+}
+
+
+
+

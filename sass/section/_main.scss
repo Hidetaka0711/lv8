@@ -1,0 +1,213 @@
+.mv {
+  // &__wrapper {
+    // height: 529px;
+    // width: 100%;
+  // }
+  &__bg-img {
+    background: transparent url(../img/bg-shape.png) repeat top center / cover;
+    height: 529px;
+    width: 100%;
+    @include mq('tab') {
+      // width: 97.45762711864407vw;
+    }
+    @include mq('sp') {
+      height: 41.333333333333336vw;
+      // height: 155px;
+      width: 100vw;
+      // width: 375px;
+    }
+  }
+  &__inner {
+    margin: 0 auto;
+    width: 1180px;
+    @include mq('tab') {
+      width: 97.45762711864407vw;
+    }
+    @include mq('sp') {
+      margin: 0;
+    }
+  }
+  &__carousel {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    @include mq('sp') {
+      flex-direction: column !important;
+    }
+  }
+  &__left {
+    display: inline-block;
+    // margin-top: 204px;
+    margin: 204px 19px 0 0; //-- カンプ40  (40 - (490 - 469))
+    width: 490px;//-- カンプ 469px
+    @include mq('tab') {
+      margin-top: 17.28813559322034vw;
+      width: 38.28125vw;
+    }
+    @include mq('sp') {
+      margin: 8.533333333333333vw auto 0;
+      // margin: 30px auto 0;
+      width: 92vw;
+    } 
+  }
+  &__title {
+    font-size: 52px;
+    line-height: division(72,52);
+    width: 490px;
+    @include mq('tab') {
+      font-size: 4.406779661016949vw;
+      width: 41.52542372881356vw;
+    }
+    @include mq('sp') {
+      font-size: 8.533333333333333vw;
+      // font-size: 32px;
+      margin: 6.4vw auto 0;
+      // margin-top: 24px;
+      text-align: center;
+      width: 77.066667vw;
+    }
+  }
+  &__sentence {
+    font-size: 16px;
+    font-family: Verdana;
+    line-height: division(19,16);
+    margin-top: 26px;
+    width: 356px;
+    @include mq('tab') {
+      font-size: 1.25vw;
+      margin-top: 2.2033898305084745vw;
+      width: 30.169491525423727vw;
+    }
+    @include mq('sp') {
+      font-size: 4.266666666666667vw;
+      // font-size: 16px;
+      margin-top: 6.4vw;
+      // margin: 6.4vw auto 0;
+      // margin-top: 24px;
+      text-align: center;
+      width: 93.33333333333333vw;
+    }
+  }
+
+  &__carousel {
+    &:last-of-type {
+      .mv__left {
+        .mv__sentence {
+          width: 432px;
+        }
+      } 
+    }
+  }
+
+
+  .pc-none {
+    display: none;
+    @include mq('sp') {
+      display: block;
+    }
+  }
+
+  &__right {
+    display: inline-block;
+    margin-top: 140px;
+    width: 670px !important;
+    @include mq('tab') {
+      margin-top: 11.864406779661017vw;
+      width: 56.77966101694915vw !important; 
+    }
+    @include mq('sp') {
+      margin: 27.733333333333334vw 4vw 0;
+      // margin: 104px 15px 0;
+      width: 92vw !important;
+      // width: 345px;
+    }
+  }
+
+
+  .mv__sentence-3 {
+      font-size: 16px;
+      font-family: Verdana;
+      line-height: division(19,16);
+      margin-top: 26px;
+      width: 432px;
+    @include mq('tab') {
+      font-size: 1.25vw;
+      margin-top: 2.2033898305084745vw;
+      width: 33.75vw;
+    }
+    @include mq('sp') {
+      font-size: 4.266666666666667vw;
+      // font-size: 16px;
+      margin-top: 6.4vw;
+      // margin: 6.4vw auto 0;
+      // margin-top: 24px;
+      text-align: center;
+      width: 93.33333333333333vw;
+    }
+    .pc-none {
+      display: none;
+      @include mq('sp') {
+        display: block;
+      }
+    }
+    .sp-none {
+      display: block;
+      @include mq('sp') {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+#slider{
+    margin: 0 auto;
+    // width: 100%;
+}
+// #slider img{
+//     height: auto;
+//     width: 100%;
+// }
+// /*slick setting*/
+// #slick-prev:before,
+// #slick-next:before {
+//     color: #000;
+// }
+
+
+.slick-slide img  {
+  display: none;
+}
+.draggable {
+  padding: 0 !important;
+}
+.slick-prev, .slick-next {
+  display: none !important;
+}
+// .slick-list {
+//   margin-bottom: 120px !important;
+// }
+.slick-dotted {
+  position: relative;
+}
+.slick-dots {
+  // padding: 930px 0 190px !important;
+  // height: 100px;
+  position: absolute;
+  top: 672px;
+  display: flex !important;
+  justify-content: center !important;
+  @include mq('tab') {
+    top: 52.5vw;
+  }
+  @include mq('sp') {
+    top: 146.66666666666666vw !important;
+    padding: 0;
+    height: 12px;
+    width: 12px;
+  }
+}
+.slick-dots li.slick-active button:before {
+  color: $color-blue !important;
+}

@@ -1,0 +1,40 @@
+// 分割した部分的なSCSSファイルをpartial
+// アンダーバーと拡張子は省略可
+// 後ファイルで必要な情報が定義されているファイルから順番に@import
+
+@import "base/reset";
+@import "setting/color";
+
+// partialでメディアクエリ変数とmixinで管理する場合順番に注意
+// 必ず変数が定義してあるファイルから順番に@import
+@import "setting/size";// レスポンシブ
+@import "base/base";
+@import "mixin/division";
+/* ==============================================================
+*  セクション
+* ============================================================ */
+@import "common/header";
+@import "section/main";
+@import "section/about";
+@import "section/activities";
+@import "section/flow";
+@import "section/member";
+@import "section/question";
+@import "section/contact";
+@import "common/footer";
+
+
+// ==============================================================
+// 参考:http://tsudoi.org/guide/detail/8.html
+// 参考:https://haniwaman.com/sass/
+// 参考:https://haniwaman.com/vscode-snipet/
+// ==============================================================
+
+// 役割
+// base・・・リセットCSSや要素の基本となるCSSを格納
+// mixin・・・アニメーションやmixinや関数を格納
+// module・・・使い回しできるモジュール的なCSSを格納
+// page・・・ページごとに必要なCSSを格納
+// setting・・・変数を格納
+
+// style.scss・・・上記のフォルダ群をまとめるファイル

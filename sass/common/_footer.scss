@@ -1,0 +1,22 @@
+footer {
+  background-color: $color-w;
+  text-align: center;
+  .copyright {
+    display: inline-block;
+    line-height: division(15,12);
+    font-size: 12px;
+    font-family: verdana;
+    margin: 44.6px auto 20px;
+    line-height: division(15,12);
+    @include mq('tab') {
+      font-size: 1.0169491525423728vw;
+      margin: 3.7796610169491527vw auto 1.694915254237288vw;
+    }  
+    @include mq('sp') {
+      font-size: 3.2vw;
+      // font-size: 12px;
+      margin: 3.36vw auto 4.64vw;
+      // margin: 12.6px auto 17.4px;
+    }
+  }
+}

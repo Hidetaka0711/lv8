@@ -1,0 +1,266 @@
+.member {
+  margin-top: 190px;
+  @include mq('tab') {
+    margin-top: 16.101694915254235vw;
+  }
+  @include mq('sp') {
+    margin-top: 26.666666666666668vw;
+    // margin-top: 100px;
+  }
+  &__inner {
+    margin: 0 auto;
+    padding: 0 165px;
+    width: 1180px;
+    @include mq('tab') {
+      padding: 0 13.983050847457626vw;
+      width: 97.45762711864407vw;
+    }
+    @include mq('sp') {
+      padding: 0 16.53333333333333vw 0 16.8vw;
+      // padding: 0 62px 0 63px;
+      width: 92%;
+    }
+  }
+  &__title {
+    color: $color-blue;
+    font-size: 42px;
+    font-weight: normal;
+    text-align: center;
+    @include mq('tab') {
+      font-size: 3.559322033898305vw;
+    }
+    @include mq('sp') {
+      font-size: 11.2vw;
+      // font-size: 42px;
+    }
+  }
+  &__introduce {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    text-align: center;
+    @include mq('tab') {
+      margin-top: 6.779661016949152vw;
+    }
+    @include mq('sp') {
+      margin-top: 13.333333333333334vw;
+      // margin-top: 50px;
+      position: relative; 
+    }
+    &-person {
+      box-shadow: $shadow;
+      height: 270px !important;
+      margin-left: 30px;
+      width: 220px !important;
+      @include mq('tab') {
+        height: 22.881355932203387vw;
+        margin-left: 2.542372881355932vw;
+        width: 18.64406779661017vw;
+      }
+      @include mq('sp') {
+        height: 72vw;
+        // height: 270px;
+        width: 58.666666666666664vw;
+        // width: 220px;
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:not(:first-of-type) {
+        @include mq('sp') {
+          display: none;
+        }
+      }
+      &-img {
+        margin-top: 10px;
+        width: 150px;
+        @include mq('tab') {
+          margin-top: 0.847457627118644vw;
+          width: 12.711864406779661vw;
+        }
+        @include mq('sp') {
+          margin-top: 2.6666666666666665vw;
+          // margin-top: 10px;
+          width: 40vw;
+          // width: 150px;
+        }
+      }
+      &-post {
+        color: $color-blue;
+        line-height: division(30,22);
+        font-size: 22px;
+        margin-top: 20px;
+        @include mq('tab') {
+          font-size: 1.8644067796610169vw;
+          margin-top: 1.694915254237288vw;
+        }
+        @include mq('sp') {
+          font-size: 5.866666666666666vw;
+          // font-size: 22px;
+          margin-top: 5.333333333333333vw;     
+          // margin-top: 20px;     
+        }
+      }
+      &-name {
+        font-size: 18px;
+        line-height: division(25,18);
+        margin-top: 8px;
+        @include mq('tab') {
+          font-size: 1.5254237288135593vw;
+          margin-top: 0.6779661016949152vw;
+        }
+        @include mq('sp') {
+          font-size: 4.8vw;
+          // font-size: 18px;
+          margin-top: 2.1333333333333333vw;
+        }
+      }
+    }
+  }
+
+  &__introduce-left {
+    position: relative;
+    margin-right: 17px;
+    @include mq('tab') {
+      margin-right: 1.4406779661016949vw;
+    }
+    @include mq('sp') {
+      margin-right: 0;
+      position: absolute;
+      top: 41%;
+      left: 12%;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 41%;
+      right: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+      }
+      @include mq('sp') {
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-bottom: solid 2px #fff;
+      border-left: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 44%;
+      right: 12px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        right: 1.0169491525423728vw;
+        margin-top: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        right: 3.2vw;
+        // right: 12px;
+        margin-top: 4.133333333333333vw;
+        // margin-top: 15.5px;
+      }
+    }
+  }
+  &__introduce-right {
+    position: relative;
+    margin-left: 17px;
+    @include mq('tab') {
+      margin-left: 1.4406779661016949vw;
+    }
+    @include mq('sp') {
+      margin-left: 0;
+      position: absolute;
+      top: 41%;
+      right: 12%;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 41%;
+      left: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+      }
+      @include mq('sp') {
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-top: solid 2px #fff;
+      border-right: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 44%;
+      left: 12px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        left: 1.0169491525423728vw;
+        margin-top: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        left: 3.2vw;
+        // left: 12px;
+        margin-top: 4.133333333333333vw;
+        // margin-top: 15.5px;
+      }
+    }
+  }
+}
+
+// #slider2 {
+//   // padding: 0;
+//   // img { 
+//   //   // width: 100%;
+//   // }
+//   // div { 
+//   //   // margin: 0 5px;
+//   // }
+//   // .slick-next {
+//   //   right: 17px; 
+//   //   z-index: 100;
+//   //   color: #333;
+//   // }
+//   // .slick-prev {
+//   //   left: 23px; 
+//   //   z-index: 100;
+//   //   color: #333;
+//   // }
+// }
+
+
+
