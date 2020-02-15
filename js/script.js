@@ -122,17 +122,21 @@ $(function() {
 // });
 
   $('#slider2').slick({
-    autoplay: true, //自動再生
+    // autoplay: true, //自動再生
     infinite: true, //スライドのループ有効化
+    // centerMode: true,
+    // centerPadding: '0px',
     slidesToShow: 3, //表示するスライドの数
     slidesToScroll: 1, //スクロールで切り替わるスライドの数
-    responsive: {
-      breakpoint: 768, //ブレークポイントが768px
-      settings: {
-        slidesToShow: 1, //表示するスライドの数
-        slidesToScroll: 1, //スクロールで切り替わるスライドの数
+    responsive:[
+      {
+        breakpoint: 768, //ブレークポイントが768px
+        settings:{
+          slidesToShow: 1, //表示するスライドの数
+          slidesToScroll: 1, //スクロールで切り替わるスライドの数
+        }
       }
-    }
+    ]
   });
 
 

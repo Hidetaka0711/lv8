@@ -41,8 +41,8 @@
     }
   }
   &__introduce {
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
     margin-top: 80px;
     text-align: center;
     @include mq('tab') {
@@ -55,9 +55,9 @@
     }
     &-person {
       box-shadow: $shadow;
-      height: 270px !important;
+      height: 270px;
       margin-left: 30px;
-      width: 220px !important;
+      width: 220px;
       @include mq('tab') {
         height: 22.881355932203387vw;
         margin-left: 2.542372881355932vw;
@@ -74,7 +74,7 @@
       }
       &:not(:first-of-type) {
         @include mq('sp') {
-          display: none;
+          // display: none;
         }
       }
       &-img {
@@ -257,41 +257,164 @@
   //   // }
   // }
 
+
+  .slick-list {
+    width: 720px;
+    margin: 0 auto;
+  }
+
   .slick-track {
-    padding: 0 65px !important;
-    width: 850px!important;
+    // padding: 0 65px !important;
+    // width: 850px!important;
     @include mq('tab') {
       padding: 0 !important;
     }
   }
   .slick-slide {
-
+    margin: 0 15px;
+    position: relative;
   }
+  .slick-prev  {
+    width: 48px;
+    height: 48px;
+    background: $color-blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    @include mq('tab') {
+      left: -3.5vw;
+      width: 4.067796610169491vw;
+      height: 4.067796610169491vw;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 0;
+      right: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+      }
+      @include mq('sp') {
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-bottom: solid 2px #fff;
+      border-left: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 6px;
+      right: 12px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        right: 1.0169491525423728vw;
+        margin-top: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        right: 3.2vw;
+        // right: 12px;
+        margin-top: 2.8vw;
+        // margin-top: 15.5px;
+      }
+    }
+  }
+  .slick-next  {
+    width: 48px;
+    height: 48px;
+    background: $color-blue;
+    border-radius: 50%;
+    position: absolute;
+    right: 17px;
+    @include mq('tab') {
+      right: -3.5vw;
+      width: 4.067796610169491vw;
+      height: 4.067796610169491vw;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+      }
+      @include mq('sp') {
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-top: solid 2px #fff;
+      border-right: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 6px;
+      left: 12px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        left: 1.0169491525423728vw;
+        margin-top: 0.5932203389830508vw;
+        top: 0.5932203389830508vw;
+        left: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        left: 3.2vw;
+        // left: 12px;
+        margin-top: 3.2vw;
+        // margin-top: 15.5px;
+      }
+    }
+  }
+
+  .slick-arrow {
+    background-color: #fff;
+  }
+  // .slick-prev:before,
+  // .slick-next:before {
+  //   background-color: $color-w;
+  //   border-radius: 50%;
+  //   color: $color-blue;
+  //   font-size: 48px;
+  //   height: 48px;
+  //   width: 48px;
+  // }
 
 }
 
 
-
-
-// #slider2 {
-//   padding: 0;
-//   img { 
-//     // width: 100%;
-//   }
-//   div { 
-//     // margin: 0 5px;
-//   }
-//   .slick-next {
-//     right: 17px; 
-//     z-index: 100;
-//     color: #333;
-//   }
-//   .slick-prev {
-//     left: 23px; 
-//     z-index: 100;
-//     color: #333;
-//   }
-// }
 
 
 
