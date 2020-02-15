@@ -1287,10 +1287,11 @@ body.open {
 
 @media screen and (max-width: 767px) {
   .activities__more {
+    text-align: center;
     border-radius: 10.133333333333333vw;
     font-size: 4.266666666666667vw;
     margin: 6.933333333333334vw 24.266666666666666vw 0 20.8vw;
-    padding: 2.933333333333333vw 10vw;
+    padding: 2.933333333333333vw 5vw;
     width: 46.666666666666664vw;
   }
 }

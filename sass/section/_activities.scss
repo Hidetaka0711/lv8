@@ -189,13 +189,14 @@
       padding: 0.9322033898305084vw 3.389830508474576vw;
     }
     @include mq('sp') {
+      text-align: center;
       border-radius: 10.133333333333333vw;
       // border-radius: 38px;
       font-size: 4.266666666666667vw;
       // font-size: 16px;
       margin: 6.933333333333334vw 24.266666666666666vw 0 20.8vw;
       // margin: 26px 91px 0 78px;
-      padding: 2.933333333333333vw 10vw;
+      padding: 2.933333333333333vw 5vw;
       // padding: 11px 39px;
       width: 46.666666666666664vw;
       // width: 175px;
