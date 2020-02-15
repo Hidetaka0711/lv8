@@ -35,6 +35,20 @@
   }
   &__shadow {
     box-shadow: $shadow;
+    &:nth-of-type(1) {
+      .question__lists  {
+        &:nth-of-type(1) {
+          margin-top: 80px;
+          @include mq('tab') {
+            margin-top: 6.779661016949152vw;
+          }
+          @include mq('sp') {
+            margin-top: 13.333333333333334vw;
+            // margin-top: 50px;
+          }
+        }  
+      }
+    }
   }
   &__lists {
     display: flex;
@@ -46,21 +60,13 @@
       margin-top: 8vw;
       // margin-top: 30px;
     }
-    &:first-of-type {
-      margin-top: 35px;
-      @include mq('tab') {
-        margin-top: 6.779661016949152vw;
-      }
-      @include mq('sp') {
-        margin-top: 13.333333333333334vw;
-        // margin-top: 50px;
-      }
-    }
+
     &-icon {
       background-color: $color-blue;
       color: $color-w;
-      display: inline-block;
+      // display: inline-block;
       font-size: 30px;
+      float: left;
       line-height: division(41,30);
       padding: 8px 16px 11px 19px;
       @include mq('tab') {
@@ -76,22 +82,26 @@
     }
     &-list {
       position: relative;
+      width: 807px;
+      @include mq('tab') {
+        width: 68.38983050847457vw;
+      }
       &-sentence {
         font-family: verdana;
         font-size: 18px;
         font-weight: bold;
         line-height: division(22,18);
-        padding: 19px 630px 19px 36px;
-        width: 867px;
+        padding: 19px 629px 19px 36px;
+        width: 807px;
         @include mq('tab') {
           font-size: 1.5254237288135593vw;
-          padding: 1.6101694915254237vw 53.389830508474574vw 1.6101694915254237vw 3.0508474576271185vw;
-          width: 73.47457627118644vw;
+          padding: 1.6101694915254237vw 52.54237288135593vw 1.6101694915254237vw 3.0508474576271185vw;
+          width: 68.38983050847457vw;
         }
         @include mq('sp') {
           font-size: 4.8vw;
           // font-size: 18px;
-          padding: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
+          padding: 5.066666666666666vw 28vw 5.066666666666666vw 9.6vw;
           // margin: 19px 108px 19px 36px;
           width: 76vw;
           // width: 285px;
@@ -110,18 +120,16 @@
         height: 1px;
         background: $color-db;
         position: absolute;
-        right: 75px;
+        right: 20px;
         top: 50%;
         transform: translateY(-50%);
         @include mq('tab') {
           width: 2.542372881355932vw;
-          right: 1.6015625vw;
+          right: 4vw;
         }
         @include mq('sp') {
           width: 8vw;
-          // width: 30px;
-          right: 5.466666666666667vw;
-          // right: 20.5px;
+          right: 0;
         }
       }
       
@@ -150,12 +158,32 @@
         float: left;
         height: 60px;
         width: 60px;
+        @include mq('tab') {
+          height: 5.084745762711864vw;
+          width: 5.084745762711864vw;
+        }
       }
       .question__lists-list {
+        width: 867px;
+        @include mq('tab') {
+          width: 73.47457627118644vw;
+        }
+        @include mq('sp') {
+          width: 345px;
+        }
         &-sentence {
           font-weight: normal;
-          float: right;
-          width: 807px;
+          // float: right;
+          padding: 19px 629px 19px 96px;
+          width: 867px;
+          @include mq('tab') {
+            padding: 1.6101694915254237vw 52.54237288135593vw 1.6101694915254237vw 8.135593220338983vw;
+            width: 73.47457627118644vw;
+          }
+          @include mq('sp') {
+            padding: 5.066666666666666vw 32vw 5.066666666666666vw 25.6vw;
+            width: 92vw;
+          }
         }
       }
     }

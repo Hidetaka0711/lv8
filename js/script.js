@@ -181,24 +181,21 @@ $('#slider2').slick({
 // });
 
 
-// $(function(){
-//   $('#acMenu, dt').on('click', function() {
-//     $(this).next().slideToggle();
-//   });
-// });
 
+
+
+//アコーディオン
 $('.toggle_switch').on('click',function(){
-  var $index = $('.question__lists').index($(this))
-  
 
   $(this).toggleClass('open');
-  $('.question__lists-list-icon').toggleClass('active');
+  $(this).find('.question__lists-list-icon').toggleClass('active');
   $(this).next('.toggle_contents').slideToggle();
-  $('.question__lists').eq($index).css('display','flex');
-
-
 });
 
+  // var $index = $('.question__lists').index($(this))
+
+
+  // $('.question__lists').eq($index).css('display','flex');
 
 // $(function() {
 //   $('.question__lists').click(function() {

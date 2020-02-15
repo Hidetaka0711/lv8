@@ -2120,6 +2120,22 @@ body.open {
           box-shadow: 0 11px 30px #7298FF29;
 }
 
+.question__shadow:nth-of-type(1) .question__lists:nth-of-type(1) {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 1179px) {
+  .question__shadow:nth-of-type(1) .question__lists:nth-of-type(1) {
+    margin-top: 6.779661016949152vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .question__shadow:nth-of-type(1) .question__lists:nth-of-type(1) {
+    margin-top: 13.333333333333334vw;
+  }
+}
+
 .question__lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2139,27 +2155,11 @@ body.open {
   }
 }
 
-.question__lists:first-of-type {
-  margin-top: 35px;
-}
-
-@media screen and (max-width: 1179px) {
-  .question__lists:first-of-type {
-    margin-top: 6.779661016949152vw;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .question__lists:first-of-type {
-    margin-top: 13.333333333333334vw;
-  }
-}
-
 .question__lists-icon {
   background-color: #3BB6D5;
   color: #ffffff;
-  display: inline-block;
   font-size: 30px;
+  float: left;
   line-height: 1.36667;
   padding: 8px 16px 11px 19px;
 }
@@ -2180,10 +2180,17 @@ body.open {
 
 .question__lists-list {
   position: relative;
+  width: 807px;
   /*
       プラスがクリックされたら縦棒を横にしてマイナスにする疑似要素
       jQueryで付け外しを行う
       */
+}
+
+@media screen and (max-width: 1179px) {
+  .question__lists-list {
+    width: 68.38983050847457vw;
+  }
 }
 
 .question__lists-list-sentence {
@@ -2191,22 +2198,22 @@ body.open {
   font-size: 18px;
   font-weight: bold;
   line-height: 1.22222;
-  padding: 19px 630px 19px 36px;
-  width: 867px;
+  padding: 19px 629px 19px 36px;
+  width: 807px;
 }
 
 @media screen and (max-width: 1179px) {
   .question__lists-list-sentence {
     font-size: 1.5254237288135593vw;
-    padding: 1.6101694915254237vw 53.389830508474574vw 1.6101694915254237vw 3.0508474576271185vw;
-    width: 73.47457627118644vw;
+    padding: 1.6101694915254237vw 52.54237288135593vw 1.6101694915254237vw 3.0508474576271185vw;
+    width: 68.38983050847457vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .question__lists-list-sentence {
     font-size: 4.8vw;
-    padding: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
+    padding: 5.066666666666666vw 28vw 5.066666666666666vw 9.6vw;
     width: 76vw;
   }
 }
@@ -2218,7 +2225,7 @@ body.open {
   height: 1px;
   background: #65B4C9;
   position: absolute;
-  right: 75px;
+  right: 20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -2227,14 +2234,14 @@ body.open {
 @media screen and (max-width: 1179px) {
   .question__lists-list-icon::before, .question__lists-list-icon::after {
     width: 2.542372881355932vw;
-    right: 1.6015625vw;
+    right: 4vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .question__lists-list-icon::before, .question__lists-list-icon::after {
     width: 8vw;
-    right: 5.466666666666667vw;
+    right: 0;
   }
 }
 
@@ -2268,10 +2275,47 @@ body.open {
   width: 60px;
 }
 
+@media screen and (max-width: 1179px) {
+  .question__lists:nth-of-type(even) .question__lists-icon {
+    height: 5.084745762711864vw;
+    width: 5.084745762711864vw;
+  }
+}
+
+.question__lists:nth-of-type(even) .question__lists-list {
+  width: 867px;
+}
+
+@media screen and (max-width: 1179px) {
+  .question__lists:nth-of-type(even) .question__lists-list {
+    width: 73.47457627118644vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .question__lists:nth-of-type(even) .question__lists-list {
+    width: 345px;
+  }
+}
+
 .question__lists:nth-of-type(even) .question__lists-list-sentence {
   font-weight: normal;
-  float: right;
-  width: 807px;
+  padding: 19px 629px 19px 96px;
+  width: 867px;
+}
+
+@media screen and (max-width: 1179px) {
+  .question__lists:nth-of-type(even) .question__lists-list-sentence {
+    padding: 1.6101694915254237vw 52.54237288135593vw 1.6101694915254237vw 8.135593220338983vw;
+    width: 73.47457627118644vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .question__lists:nth-of-type(even) .question__lists-list-sentence {
+    padding: 5.066666666666666vw 32vw 5.066666666666666vw 25.6vw;
+    width: 92vw;
+  }
 }
 
 .question__lists:nth-of-type(even)::after {
