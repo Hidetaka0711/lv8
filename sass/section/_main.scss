@@ -8,6 +8,7 @@
     height: 529px;
     width: 100%;
     @include mq('tab') {
+      height: 44.83050847457627vw;
       // width: 97.45762711864407vw;
     }
     @include mq('sp') {
@@ -121,6 +122,10 @@
       width: 92vw !important;
       // width: 345px;
     }
+    // &-img {
+    //   height: 480px;
+    //   width: 800px;
+    // }
   }
 
 
@@ -199,14 +204,17 @@
   display: flex !important;
   justify-content: center !important;
   @include mq('tab') {
-    top: 52.5vw;
+    top: 56.94915254237288vw;
   }
   @include mq('sp') {
-    top: 146.66666666666666vw !important;
+    top: 148vw !important;
+    // top: 146.66666666666666vw !important;
+    // top: 239px;
     padding: 0;
     height: 12px;
     width: 12px;
   }
+
 }
 .slick-dots li.slick-active button:before {
   color: $color-blue !important;

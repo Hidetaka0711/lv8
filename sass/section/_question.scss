@@ -93,8 +93,8 @@
           // font-size: 18px;
           padding: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
           // margin: 19px 108px 19px 36px;
-          width: 92vw;
-          // width: 345px;
+          width: 76vw;
+          // width: 285px;
         }
       }
       // &-icon {
@@ -110,7 +110,7 @@
         height: 1px;
         background: $color-db;
         position: absolute;
-        right: 20.5px;
+        right: 75px;
         top: 50%;
         transform: translateY(-50%);
         @include mq('tab') {
@@ -124,14 +124,11 @@
           // right: 20.5px;
         }
       }
-      /* 2本の横棒のうち一本は縦棒にする */
-      span::after {
-        /* 横棒を縦にするために90℃回転させる */
-        transform: translateY(-50%) rotate(90deg);
-        /* プラスからマイナスへの切り替えをゆっくり行いアニメーションさせる */
-        transition: 0.5s;
-      }
       
+      span::after {/* 2本の横棒のうち一本は縦棒にする */
+        transform: translateY(-50%) rotate(90deg);/* 横棒を縦にするために90℃回転 */
+        transition: 0.5s;/* プラスからマイナスへの切替をゆっくり行いアニメーション*/
+      }
       /*
       プラスがクリックされたら縦棒を横にしてマイナスにする疑似要素
       jQueryで付け外しを行う
@@ -150,21 +147,22 @@
       .question__lists-icon {
         background-color: $color-w;
         color: $color-blue;
+        float: left;
         height: 60px;
         width: 60px;
       }
       .question__lists-list {
         &-sentence {
           font-weight: normal;
+          float: right;
           width: 807px;
         }
       }
-      // .question__lists-list-sentence {
-      //   // width: 113px;
-      // }  
+    }
+    &:nth-of-type(even)::after {
+      content: '';
+      display: block;
+      clear: both;
     }
   } 
-  // .text-open {
-  //   display: block;
-  // }
 }

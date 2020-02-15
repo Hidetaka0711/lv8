@@ -138,12 +138,12 @@
         &-parts:after{
           content: " ";
         }
-        &-parts:before{//-- barの上
+        &-parts:before{//-- barの下
           top: 4.533333333333333vw;
           // top: 17px
         }
-        &-parts:after{//-- barの下
-          top: -4vw;
+        &-parts:after{//-- barの上
+          top: -4.533333333333333vw;
           // top: -15px;
         }
 
@@ -253,9 +253,34 @@
 
 }//-- header --//
 
+/*画面全体にローディング画面を表示*/
+#showLoading {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+#showLoading img {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.hidden {
+display: none;
+}
+
 #about, #activities, #flow, #member, #question, #contact {
   margin-top: -74px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 74px; /* 打ち消し用のパディング */
+  @include mq('tab') {
+    margin-top: -6.271186440677965vw;
+    padding-top: 6.271186440677965vw;
+  }
+  @include mq('sp') {
+    margin-top: -19.733333333333334vw;
+    padding-top: 19.733333333333334vw;
+  }
 }
 
 

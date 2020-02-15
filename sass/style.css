@@ -307,7 +307,7 @@ body.open {
 }
 
 .header__inner .l-drawer__icon-parts:after {
-  top: -4vw;
+  top: -4.533333333333333vw;
 }
 
 .header__inner .l-drawer__menu {
@@ -381,6 +381,26 @@ body.open {
   transition: all .7s;
 }
 
+/*画面全体にローディング画面を表示*/
+#showLoading {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+
+#showLoading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
 #about, #activities, #flow, #member, #question, #contact {
   margin-top: -74px;
   /* 固定ナビの高さ分のネガティブマージン */
@@ -388,10 +408,30 @@ body.open {
   /* 打ち消し用のパディング */
 }
 
+@media screen and (max-width: 1179px) {
+  #about, #activities, #flow, #member, #question, #contact {
+    margin-top: -6.271186440677965vw;
+    padding-top: 6.271186440677965vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #about, #activities, #flow, #member, #question, #contact {
+    margin-top: -19.733333333333334vw;
+    padding-top: 19.733333333333334vw;
+  }
+}
+
 .mv__bg-img {
   background: transparent url(../img/bg-shape.png) repeat top center/cover;
   height: 529px;
   width: 100%;
+}
+
+@media screen and (max-width: 1179px) {
+  .mv__bg-img {
+    height: 44.83050847457627vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -619,13 +659,13 @@ body.open {
 
 @media screen and (max-width: 1179px) {
   .slick-dots {
-    top: 52.5vw;
+    top: 56.94915254237288vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .slick-dots {
-    top: 146.66666666666666vw !important;
+    top: 148vw !important;
     padding: 0;
     height: 12px;
     width: 12px;
@@ -2140,7 +2180,6 @@ body.open {
 
 .question__lists-list {
   position: relative;
-  /* 2本の横棒のうち一本は縦棒にする */
   /*
       プラスがクリックされたら縦棒を横にしてマイナスにする疑似要素
       jQueryで付け外しを行う
@@ -2168,7 +2207,7 @@ body.open {
   .question__lists-list-sentence {
     font-size: 4.8vw;
     padding: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
-    width: 92vw;
+    width: 76vw;
   }
 }
 
@@ -2179,7 +2218,7 @@ body.open {
   height: 1px;
   background: #65B4C9;
   position: absolute;
-  right: 20.5px;
+  right: 75px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -2200,12 +2239,13 @@ body.open {
 }
 
 .question__lists-list span::after {
-  /* 横棒を縦にするために90℃回転させる */
+  /* 2本の横棒のうち一本は縦棒にする */
   -webkit-transform: translateY(-50%) rotate(90deg);
           transform: translateY(-50%) rotate(90deg);
-  /* プラスからマイナスへの切り替えをゆっくり行いアニメーションさせる */
+  /* 横棒を縦にするために90℃回転 */
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  /* プラスからマイナスへの切替をゆっくり行いアニメーション*/
 }
 
 .question__lists-list .active::after {
@@ -2223,13 +2263,21 @@ body.open {
 .question__lists:nth-of-type(even) .question__lists-icon {
   background-color: #ffffff;
   color: #3BB6D5;
+  float: left;
   height: 60px;
   width: 60px;
 }
 
 .question__lists:nth-of-type(even) .question__lists-list-sentence {
   font-weight: normal;
+  float: right;
   width: 807px;
+}
+
+.question__lists:nth-of-type(even)::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .contact {
