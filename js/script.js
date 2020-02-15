@@ -5,13 +5,13 @@ document.getElementById('btn-open').addEventListener('click', function() {
 
 
 // ローディング画面のdivを取得
-var showloading = document.getElementById('showloading');
+var showLoading = document.getElementById('showLoading');
 // 画面本体のdivを取得
 var contents = document.getElementById('contents');
 // 読み込みが完了したら発動
 window.addEventListener('load', function () {
 // loadingのdivを非表示に
-showloading.style.display = 'none';
+showLoading.style.display = 'none';
 // contentsのdivを表示
 contents.classList.remove('hidden');
 });
@@ -171,4 +171,41 @@ $('#slider2').slick({
 //       slidesToScroll: 1, //スクロールで切り替わるスライドの数
 //     }
 //   }
+// });
+
+
+// $(function(){
+//   $('#acMenu, dt').on('click', function() {
+//     $(this).next().slideToggle();
+//   });
+// });
+
+$('.toggle_switch').on('click',function(){
+  var index = $('.question__lists').index($(this))
+  $(this).toggleClass('open');
+  $(this).next('.toggle_contents').slideToggle();
+  $('.question__lists').eq(index).css('display','flex');
+});
+
+// $(function() {
+//   $('.question__lists').click(function() {
+//     var $answer = $(this).find('.answer');
+    
+//     if($answer.hasClass('text-open')) {
+//       $answer.removeClass('text-open');
+//       $answer.slideUp();
+//       // $(this).find('span').text('+');
+//     } else {
+//       $answer.addClass('text-open');
+//       $answer.slideDown();
+//       // $(this).find('span').text('-');
+//     }
+//   });
+// });
+
+// $('.toggle_switch').on('click',function(){
+//   $(this).toggleClass('open');
+//   $(this).next('.toggle_contents').slideToggle();
+
+//   if($('.question__lists').hasClass())
 // });

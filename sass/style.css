@@ -1776,9 +1776,9 @@ body.open {
 .member__introduce-person {
   -webkit-box-shadow: 0 11px 30px #7298FF29;
           box-shadow: 0 11px 30px #7298FF29;
-  height: 270px;
+  height: 270px !important;
   margin-left: 30px;
-  width: 220px;
+  width: 220px !important;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2075,6 +2075,11 @@ body.open {
   }
 }
 
+.question__shadow {
+  -webkit-box-shadow: 0 11px 30px #7298FF29;
+          box-shadow: 0 11px 30px #7298FF29;
+}
+
 .question__lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2095,7 +2100,7 @@ body.open {
 }
 
 .question__lists:first-of-type {
-  margin-top: 80px;
+  margin-top: 35px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2134,8 +2139,6 @@ body.open {
 }
 
 .question__lists-list {
-  -webkit-box-shadow: 0 11px 30px #7298FF29;
-          box-shadow: 0 11px 30px #7298FF29;
   position: relative;
   /* 2本の横棒のうち一本は縦棒にする */
   /*
@@ -2149,23 +2152,23 @@ body.open {
   font-size: 18px;
   font-weight: bold;
   line-height: 1.22222;
-  margin: 19px 630px 19px 36px;
-  width: 143px;
+  padding: 19px 630px 19px 36px;
+  width: 867px;
 }
 
 @media screen and (max-width: 1179px) {
   .question__lists-list-sentence {
     font-size: 1.5254237288135593vw;
-    margin: 1.6101694915254237vw 53.389830508474574vw 1.6101694915254237vw 3.0508474576271185vw;
-    width: 12.118644067796609vw;
+    padding: 1.6101694915254237vw 53.389830508474574vw 1.6101694915254237vw 3.0508474576271185vw;
+    width: 73.47457627118644vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .question__lists-list-sentence {
     font-size: 4.8vw;
-    margin: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
-    width: 38.13333333333333vw;
+    padding: 5.066666666666666vw 28.8vw 5.066666666666666vw 9.6vw;
+    width: 92vw;
   }
 }
 
@@ -2210,6 +2213,23 @@ body.open {
           transform: rotate(0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.question__lists:nth-of-type(even) {
+  margin-top: 0;
+  display: none;
+}
+
+.question__lists:nth-of-type(even) .question__lists-icon {
+  background-color: #ffffff;
+  color: #3BB6D5;
+  height: 60px;
+  width: 60px;
+}
+
+.question__lists:nth-of-type(even) .question__lists-list-sentence {
+  font-weight: normal;
+  width: 807px;
 }
 
 .contact {
