@@ -49,39 +49,6 @@ $(function() {
 });
 
 
-// $(function(){
-//   var effect_pos = -100; // 画面下からどの位置でフェードさせるか(px)
-//   var effect_move = 50; // どのぐらい要素を動かすか(px)
-//   var effect_time = 800; // エフェクトの時間(ms) 1秒なら1000
-
-//   // フェードする前のcssを定義
-//   $('.scroll-fade').css({
-//       opacity: 0,
-//       transform: 'translateY('+ effect_move +'px)',
-//       transition: effect_time + 'ms'
-//   });
-
-//   // スクロールまたはロードするたびに実行
-//   $(window).on('scroll load', function(){
-//       var scroll_top = $(this).scrollTop();
-//       var scroll_btm = scroll_top + $(this).height();
-//       effect_pos = scroll_btm - effect_pos;
-
-//       // effect_posがthis_posを超えたとき、エフェクトが発動
-//       $('.scroll-fade').each( function() {
-//           var this_pos = $(this).offset().top;
-//           if ( effect_pos > this_pos ) {
-//               $(this).css({
-//                   opacity: 1,
-//                   transform: 'translateY(0)'
-//               });
-//           }
-//       });
-//   });
-// });
-
-
-
 //タブ切替え
 $(function(){
 	$('.tab').click(function(){
@@ -130,16 +97,6 @@ $(function () {
   });
 });
 
-// $(function() {
-//   var index = $('.openModal').index($(this));
-
-//   $('.openModal').eq(index).click(function() {
-//     $('.modalArea').eq(index).fadeIn();
-//   });
-//   $('.closeModal , .modalBg').eq(index).click(function(){
-//     $('.modalArea').eq(index).fadeOut();
-//   });
-// });
 
 //モーダル背景固定
 $(function() {
@@ -154,70 +111,35 @@ $(function() {
 
 
 //メンバーのスライダー
-$('#slider2').slick({
-  autoplay:true,
-  infinite: true, // スライドのループを有効にするか
-  autoplaySpeed:5000,
-  centerMode: true,
-  slidesToShow: 3, //表示するスライドの数
-  slidesToScroll: 1, //スクロールで切り替わるスライドの数
-  // dots:true,
-});
-
 // $('#slider2').slick({
-//   autoplay: true, //自動再生
-//   autoplaySpeed:5000,
-//   infinite: true, //スライドのループ有効化
-//   // dots: true, //ドットのナビゲーションを表示
-//   slidesToShow: 3, //表示するスライドの数
-//   slidesToScroll: 1, //スクロールで切り替わるスライドの数
-//   responsive: {
-//       breakpoint: 768, //ブレークポイントが768px
-//       settings: {
-//       slidesToShow: 1, //表示するスライドの数
-//       slidesToScroll: 1, //スクロールで切り替わるスライドの数
-//     }
-//   }
+//   autoplay:true,
+//   // infinite: true, // スライドのループを有効にするか
+//   // autoplaySpeed:5000,
+//   // centerMode: true,
+//   // slidesToShow: 1, //表示するスライドの数
+//   // slidesToScroll: 1, //スクロールで切り替わるスライドの数
+//   // // dots:true,
 // });
 
-
-
+  $('#slider2').slick({
+    autoplay: true, //自動再生
+    infinite: true, //スライドのループ有効化
+    slidesToShow: 3, //表示するスライドの数
+    slidesToScroll: 1, //スクロールで切り替わるスライドの数
+    responsive: {
+      breakpoint: 768, //ブレークポイントが768px
+      settings: {
+        slidesToShow: 1, //表示するスライドの数
+        slidesToScroll: 1, //スクロールで切り替わるスライドの数
+      }
+    }
+  });
 
 
 //アコーディオン
 $('.toggle_switch').on('click',function(){
-
   $(this).toggleClass('open');
   $(this).find('.question__lists-list-icon').toggleClass('active');
   $(this).next('.toggle_contents').slideToggle();
 });
 
-  // var $index = $('.question__lists').index($(this))
-
-
-  // $('.question__lists').eq($index).css('display','flex');
-
-// $(function() {
-//   $('.question__lists').click(function() {
-//     var $icon = $('.question__lists-list-icon') .index($(this))
-//     var $index = $('.question__lists').index($(this))
-//     if($icon.hasClass('active')) {
-//       $icon.removeClass('active');
-//       $answer.slideUp();
-//       $(this).find('span').text('+');
-//     } else {
-//       $icon.addClass('active');
-//       $answer.slideDown();
-//       $(this).find('span').text('-');
-//     }
-//   });
-// });
-
-
-
-// $('.toggle_switch').on('click',function(){
-//   $(this).toggleClass('open');
-//   $(this).next('.toggle_contents').slideToggle();
-
-//   if($('.question__lists').hasClass())
-// });

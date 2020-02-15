@@ -1,4 +1,10 @@
 .member {
+
+  * {
+    min-height:0;
+    min-width : 0;
+  }
+
   margin-top: 190px;
   @include mq('tab') {
     margin-top: 16.101694915254235vw;
@@ -35,8 +41,8 @@
     }
   }
   &__introduce {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     margin-top: 80px;
     text-align: center;
     @include mq('tab') {
@@ -72,7 +78,7 @@
         }
       }
       &-img {
-        margin-top: 10px;
+        margin: 10px auto 0;
         width: 150px;
         @include mq('tab') {
           margin-top: 0.847457627118644vw;
@@ -240,26 +246,51 @@
       }
     }
   }
+
+  // .slick-list {
+  //   padding: 0 65px !important;
+  //   // @include mq('tab') {
+      
+  //   // }
+  //   // @include mq('sp') {
+      
+  //   // }
+  // }
+
+  .slick-track {
+    padding: 0 65px !important;
+    width: 850px!important;
+    @include mq('tab') {
+      padding: 0 !important;
+    }
+  }
+  .slick-slide {
+
+  }
+
 }
 
+
+
+
 // #slider2 {
-//   // padding: 0;
-//   // img { 
-//   //   // width: 100%;
-//   // }
-//   // div { 
-//   //   // margin: 0 5px;
-//   // }
-//   // .slick-next {
-//   //   right: 17px; 
-//   //   z-index: 100;
-//   //   color: #333;
-//   // }
-//   // .slick-prev {
-//   //   left: 23px; 
-//   //   z-index: 100;
-//   //   color: #333;
-//   // }
+//   padding: 0;
+//   img { 
+//     // width: 100%;
+//   }
+//   div { 
+//     // margin: 0 5px;
+//   }
+//   .slick-next {
+//     right: 17px; 
+//     z-index: 100;
+//     color: #333;
+//   }
+//   .slick-prev {
+//     left: 23px; 
+//     z-index: 100;
+//     color: #333;
+//   }
 // }
 
 

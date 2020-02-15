@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 // 共通カラーコードやpx値などは、変数としてsettingへ
-
 *,
 *::before,
 *::after {
@@ -32,20 +31,20 @@ body.open {
   overflow: hidden;
 }
 
+
 /*画面全体にローディング画面を表示*/
-#showloading {
+#showLoading {
   width: 100%;
   height: 100vh;
   background-color: #fff;
   position: relative;
 }
-#showloading img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#showLoading img {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 .hidden {
-  display: none;
+display: none;
 }
-
