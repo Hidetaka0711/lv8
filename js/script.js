@@ -44,7 +44,7 @@ $('#slider').slick({
 //about フェードイン
 $(function() {
   $('ul.delay-show li').css({opacity: 0}).each(function(i){
-    $(this).delay(700 * i).animate({opacity:1}, 1500);
+    $(this).delay(850 * i).animate({opacity:1}, 1500);
   });
 });
 

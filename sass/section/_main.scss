@@ -182,14 +182,15 @@
     // padding: 930px 0 190px !important;
     // height: 100px;
     position: absolute;
-    top: 672px;
+    top: 610px !important;
+    // top: 672px !important;
     display: flex !important;
     justify-content: center !important;
     @include mq('tab') {
-      top: 56.94915254237288vw;
+      top: 51.69491525423729vw !important;
     }
     @include mq('sp') {
-      top: 148vw !important;
+      top: 150vw !important;
       // top: 146.66666666666666vw !important;
       // top: 239px;
       padding: 0;

@@ -65,8 +65,11 @@
     border-left: 0;
     color: $color-blue;
     font-size: 22px;
+    text-align: center;
+    width: 202px;
     @include mq('tab') {
       font-size: 1.8644067796610169vw;
+      width: 17.11864406779661;
     }
     @include mq('sp') {
       font-size: 4.8vw;

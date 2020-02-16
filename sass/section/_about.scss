@@ -1,7 +1,7 @@
 .about {
-  margin-top: 345px;
+  margin-top: 262px;
   @include mq('tab') {
-    margin-top: 29.237288135593218vw; 
+    margin-top: 22.203389830508474vw; 
   }
   @include mq('sp') {
     margin-top: 132.53333333333333vw;
@@ -130,16 +130,17 @@
   &__valuable {
     color: $color-blue;
     font-size: 16px;
+    font-family: verdana;
     line-height: division(19,16);
     height: 38px;
-    margin: 80px auto 136px;
+    margin: 80px auto 98px;
     text-align: center;
-    width: 306px;
+    width: 310px;
     @include mq('tab') {
       font-size: 1.3559322033898304vw;
       height: 3.2203389830508473vw;
-      margin: 6.779661016949152vw auto 11.525423728813559vw;
-      width: 30.508474576271183vw;
+      margin: 6.779661016949152vw auto 7.65625vw;
+      width: 26.271186440677965vw;
     }
     @include mq('sp') {
       font-size: 4.266666666666667vw;
@@ -148,8 +149,8 @@
       // height: 38px;
       margin: 13.333333333333334vw auto;
       // margin: 50px auto;
-      width: 81.6vw;
-      // width: 306px;
+      width: 82.66666666666667vw;
+      // width: 310px;
     }
   }
   &__logos {
