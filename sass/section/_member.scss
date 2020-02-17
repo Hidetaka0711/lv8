@@ -328,7 +328,7 @@
       border-bottom: solid 2px #fff;
       border-left: solid 2px #fff;
       transform: rotate(45deg);
-      top: 10px;
+      top: 12px;
       right: 77px;
       margin-top: 7px;
       @include mq('tab') {
@@ -336,6 +336,7 @@
         height: 1.5254237288135593vw;
         right: 1.6vw;
         // right: -30px;//////////////////////////
+        top: 1.0169491525423728vw;
         margin-top: 0.4vw;
       }
       @include mq('sp') {
@@ -397,7 +398,7 @@
       border-top: solid 2px #fff;
       border-right: solid 2px #fff;
       transform: rotate(45deg);
-      top: 10px;
+      top: 12px;
       right: -45px;
       margin-top: 7px;
       @include mq('tab') {
@@ -405,6 +406,7 @@
         height: 1.5254237288135593vw;
         right: 1vw;
         // left: -30px;//////////////////////////
+        top: 1.0169491525423728vw;
         margin-top: 0.4vw;
         // left: 0.5932203389830508vw;
       }

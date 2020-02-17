@@ -2127,7 +2127,7 @@ body.open {
   border-left: solid 2px #fff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 10px;
+  top: 12px;
   right: 77px;
   margin-top: 7px;
 }
@@ -2137,6 +2137,7 @@ body.open {
     width: 1.5254237288135593vw;
     height: 1.5254237288135593vw;
     right: 1.6vw;
+    top: 1.0169491525423728vw;
     margin-top: 0.4vw;
   }
 }
@@ -2206,7 +2207,7 @@ body.open {
   border-right: solid 2px #fff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 10px;
+  top: 12px;
   right: -45px;
   margin-top: 7px;
 }
@@ -2216,6 +2217,7 @@ body.open {
     width: 1.5254237288135593vw;
     height: 1.5254237288135593vw;
     right: 1vw;
+    top: 1.0169491525423728vw;
     margin-top: 0.4vw;
   }
 }
