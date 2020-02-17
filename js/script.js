@@ -42,11 +42,35 @@ $('#slider').slick({
 
 
 //about フェードイン
-$(function() {
-  $('ul.delay-show li').css({opacity: 0}).each(function(i){
-    $(this).delay(850 * i).animate({opacity:1}, 1500);
+// $(function() {
+//   $('ul.delay-show li').css({opacity: 0}).each(function(i){
+//     $(this).delay(850 * i).animate({opacity:1}, 3000);
+//   });
+// });
+
+//about フェードイン
+$(function(){
+  $('ul.delay-show li').css("opacity","0");  
+    $(window).scroll(function (){
+    $('ul.delay-show li').each(function(){
+
+        var elemPos = $(this).offset().top;      /*画面上部からの距離*/
+        var scroll = $(window).scrollTop();      /*スクロールした量*/
+        var windowHeight = $(window).height();       /*画面の高さ*/
+
+    /*発動条件：画面の高さが1/4までスクロールしたら順番に表示*/
+    if (scroll > elemPos - windowHeight + windowHeight/4){
+    $(function(){
+    $('ul.delay-show li')
+        .each(function(i){
+          $(this).delay(850*i).animate({opacity:1}, 1500);
+        });
+        }); 
+      }
+    });
   });
 });
+
 
 
 //タブ切替え

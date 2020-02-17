@@ -249,202 +249,176 @@
     }
   }
 
+  // .slick-list {
+  //   padding: 0 65px !important;
+  //   // @include mq('tab') {
+      
+  //   // }
+  //   // @include mq('sp') {
+      
+  //   // }
+  // }
+
+
   .slick-list {
-    width: 850px;
+    width: 720px;
     margin: 0 auto;
   }
 
-  // .slick-track {
-  //   // padding: 0 65px !important;
-  //   // width: 850px!important;
-  //   @include mq('tab') {
-  //     // padding: 0 !important;
-  //   }
-  // }
+  .slick-track {
+    // padding: 0 65px !important;
+    // width: 850px!important;
+    @include mq('tab') {
+      padding: 0 !important;
+    }
+  }
   .slick-slide {
     margin: 0 15px;
     position: relative;
-    @include mq('sp') {
-      width: 58.666666666666664vw;
-    }
   }
   
-  .slick-arrow {
-    border-radius: 50%;
-    height: 48px;
+  .slick-prev  {
     width: 48px;
-    @include mq('sp') {
-      height: 12.8vw;
-      width: 12.8vw;
+    height: 48px;
+    background: $color-blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    @include mq('tab') {
+      left: -3.5vw;
+      width: 4.067796610169491vw;
+      height: 4.067796610169491vw;
+    }
+    &:before {///////////////////////// 左の丸が動く
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 2px;
+      right: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+        right: 0.8vw;/////////////////////////////
+        // right: 40px;
+      }
+      @include mq('sp') {
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+        top: -4.8vw;////////////////////////////////////
+        right: -5.333333333333333vw;/////////////////////////////////
+      }
+    }
+    &:after {///////////////////////// 左の矢印が動く
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-bottom: solid 2px #fff;
+      border-left: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 10px;
+      right: 12px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        right: 1.5vw;
+        // right: -30px;//////////////////////////
+        margin-top: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        top: -4vw;///////////////////////
+        right: -2.6666666666666665vw;//////////////////////
+        // right: 3.2vw;
+        // right: 12px;
+        margin-top: 3.2vw;
+        // margin-top: 15.5px;
+      }
     }
   }
-
-  .slick-prev {
-    &:before {
-      color: $color-blue;
-      font-size: 48px;
+  .slick-next  {
+    width: 48px;
+    height: 48px;
+    background: $color-blue;
+    border-radius: 50%;
+    position: absolute;
+    right: 17px;
+    @include mq('tab') {
+      right: -3.5vw;
+      width: 4.067796610169491vw;
+      height: 4.067796610169491vw;
+    }
+    &:before {///////////////////////// 右の丸が動く
       position: absolute;
-      top: 0;
-      right: 17px;
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: $color-blue;
+      border-radius: 50%;
+      top: 2px;
+      left: 0;
+      @include mq('tab') {
+        width: 4.067796610169491vw;
+        height: 4.067796610169491vw;
+        left: 0.7vw;/////////////////////////////
+        // right: 40px;
+      }
       @include mq('sp') {
-        font-size: 12.8vw;
-        top: 15px;
-        right: 0;
+        width: 12.8vw;
+        // width: 48px;
+        height: 12.8vw;
+        // height: 48px;
+        top: -4.8vw;////////////////////////////////////
+        left: -6.333333333333333vw;/////////////////////////////////
+      }
+    }
+    &:after {///////////////////////// 右矢印が動く
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-top: solid 2px #fff;
+      border-right: solid 2px #fff;
+      transform: rotate(45deg);
+      top: 10px;
+      right: 18px;
+      margin-top: 7px;
+      @include mq('tab') {
+        width: 1.5254237288135593vw;
+        height: 1.5254237288135593vw;
+        right: 1vw;
+        // left: -30px;//////////////////////////
+        margin-top: 0.5932203389830508vw;
+        // top: 0.6779661016949152vw;
+        // left: 0.5932203389830508vw;
+      }
+      @include mq('sp') {
+        width: 4.8vw;
+        // width: 18px;
+        height: 4.8vw;
+        // height: 18px;
+        top: -4vw;///////////////////////
+        right: 2.6666666666666665vw;/////////////////////////////
+        // left: 3.2vw;
+        // left: 12px;
+        margin-top: 3.2vw;
+        // margin-top: 15.5px;
       }
     }
   }
 
-  .slick-next {
-    &:before {
-      color: $color-blue;
-      font-size: 48px;
-      position: absolute;
-      top: 0;
-      left: 17px;
-      @include mq('sp') {
-        font-size: 12.8vw;
-        top: 15px;
-        left: 0;
-      }
-    }
+  .slick-arrow {
+    background-color: #fff;
   }
-  // .slick-prev  {
-
-  //   position: absolute;
-  //   left: 17px;
-  //   @include mq('tab') {
-  //     left: -3.5vw;
-  //     width: 4.067796610169491vw;
-  //     height: 4.067796610169491vw;
-  //   }
-  //   &:before {
-  //     position: absolute;
-  //     content: '';
-  //     width: 48px;
-  //     height: 48px;
-  //     background: $color-blue;
-  //     border-radius: 50%;
-  //     top: 0;
-  //     right: 0;
-  //     @include mq('tab') {
-  //       width: 4.067796610169491vw;
-  //       height: 4.067796610169491vw;
-  //       right: -3.125vw;/////////////////////////////
-  //       // right: 40px;
-  //     }
-  //     @include mq('sp') {
-  //       width: 12.8vw;
-  //       // width: 48px;
-  //       height: 12.8vw;
-  //       // height: 48px;
-  //       top: -18px;////////////////////////////////////
-  //       right: -20px;/////////////////////////////////
-  //     }
-  //   }
-  //   &:after {
-  //     position: absolute;
-  //     content: '';
-  //     width: 18px;
-  //     height: 18px;
-  //     border-bottom: solid 2px #fff;
-  //     border-left: solid 2px #fff;
-  //     transform: rotate(45deg);
-  //     top: 8px;
-  //     right: 12px;
-  //     margin-top: 7px;
-  //     @include mq('tab') {
-  //       width: 1.5254237288135593vw;
-  //       height: 1.5254237288135593vw;
-  //       right: -2.34375vw;
-  //       // right: -30px;//////////////////////////
-  //       margin-top: 0.5932203389830508vw;
-  //     }
-  //     @include mq('sp') {
-  //       width: 4.8vw;
-  //       // width: 18px;
-  //       height: 4.8vw;
-  //       // height: 18px;
-  //       top: -4vw;///////////////////////
-  //       right: -2.6666666666666665vw;//////////////////////
-  //       // right: 3.2vw;
-  //       // right: 12px;
-  //       margin-top: 3.2vw;
-  //       // margin-top: 15.5px;
-  //     }
-  //   }
-  // }
-  // .slick-next  {
-  //   width: 48px;
-  //   height: 48px;
-  //   background: $color-blue;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   right: 17px;
-  //   @include mq('tab') {
-  //     right: -3.5vw;
-  //     width: 4.067796610169491vw;
-  //     height: 4.067796610169491vw;
-  //   }
-  //   &:before {
-  //     position: absolute;
-  //     content: '';
-  //     width: 48px;
-  //     height: 48px;
-  //     background: $color-blue;
-  //     border-radius: 50%;
-  //     top: 0;
-  //     left: 0;
-  //     @include mq('tab') {
-  //       width: 4.067796610169491vw;
-  //       height: 4.067796610169491vw;
-  //       left: -3.125vw;/////////////////////////////
-  //       // right: 40px;
-  //     }
-  //     @include mq('sp') {
-  //       width: 12.8vw;
-  //       // width: 48px;
-  //       height: 12.8vw;
-  //       // height: 48px;
-  //       top: -18px;////////////////////////////////////
-  //       left: -20px;/////////////////////////////////
-  //     }
-  //   }
-  //   &:after {
-  //     position: absolute;
-  //     content: '';
-  //     width: 18px;
-  //     height: 18px;
-  //     border-top: solid 2px #fff;
-  //     border-right: solid 2px #fff;
-  //     transform: rotate(45deg);
-  //     top: 8px;
-  //     left: 12px;
-  //     margin-top: 7px;
-  //     @include mq('tab') {
-  //       width: 1.5254237288135593vw;
-  //       height: 1.5254237288135593vw;
-  //       left: -2.34375vw;
-  //       // left: -30px;//////////////////////////
-  //       margin-top: 0.5932203389830508vw;
-  //       // top: 0.6779661016949152vw;
-  //       // left: 0.5932203389830508vw;
-  //     }
-  //     @include mq('sp') {
-  //       width: 4.8vw;
-  //       // width: 18px;
-  //       height: 4.8vw;
-  //       // height: 18px;
-  //       top: -4vw;///////////////////////
-  //       left: -2.6666666666666665vw;/////////////////////////////
-  //       // left: 3.2vw;
-  //       // left: 12px;
-  //       margin-top: 3.2vw;
-  //       // margin-top: 15.5px;
-  //     }
-  //   }
-  // }
-
-
   // .slick-prev:before,
   // .slick-next:before {
   //   background-color: $color-w;
